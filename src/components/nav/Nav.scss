@@ -1,0 +1,264 @@
+@import '../../style/style.scss';
+
+nav {
+  background-color: $white-light;
+  position: relative;
+
+  .container {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: fit-content;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    .menu-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      ul {
+        list-style: none;
+        width: 100%;
+        justify-content: space-between;
+
+        @media screen and (min-width: $lg) {
+          display: flex;          
+        }
+
+        li {
+          a {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 26px;
+            letter-spacing: 0;
+            color: $black;
+          }
+        }
+      }
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+
+      @media screen and (min-width: $lg) and (max-width: $xl) {
+        display: none;
+      }
+
+      @media screen and (max-width: ($lg - 1)) {
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      a {
+        margin: 10px 0;
+      }
+    }
+
+    .phoneNumber {
+      color: $black;
+      font-family: Cupra;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0.06em;     
+    }
+  }
+
+  .btn{
+    
+    @media screen and (max-width: $sm) {
+      width: 80% !important;
+  }
+
+  @media screen and (min-width: $sm) and (max-width: $md) { 
+    width: 60% !important;
+  }
+
+  @media screen and (min-width: $md) and (max-width: $lg) { 
+    width: 50% !important;
+  }
+
+}
+
+  .mobile-menu-toggle {
+    display: none;
+
+    @media screen and (max-width: ($lg - 1)) {
+      display: block;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+
+    @media screen and (max-width: ($lg - 1)) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background-color: $white-light;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: ($lg - 1)) {
+    .container {
+      .menu-list {
+        width: 100%;
+        margin-bottom: 20px;
+
+        ul {
+          width: 100%;
+          li {
+            justify-content: center;
+            display: flex;
+            margin: 5% 0;
+
+            a {
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .mobile-menu {
+        display: none;
+
+        &.open {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $lg) {
+    .mobile-menu-toggle {
+      display: none;
+    }
+
+    .container {
+      .menu-list {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;   
+      }
+    }
+  }
+
+  @media screen and (min-width: $lg) and (max-width: $xl) {
+    .menu-list {
+      width: 100%;
+      justify-content: flex-end !important;    
+      ul {
+        width: 60% !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: $xl) and (max-width: 1300px) {
+    .menu-list {
+      width: 50%;
+      ul {
+        width: 80% !important;
+      }
+  
+      a {
+        font-size: 14px !important;
+      }
+    }
+
+    .contact {
+      width: 50%;
+      justify-content: space-between; 
+
+      a {
+        font-size: 14px !important;       
+      }
+
+      .btn.squere {
+        padding: 0 10px !important;
+        font-size: 14px !important;    
+      }
+    }
+  }
+
+  @media screen and (min-width: 1301px) and (max-width: $xxl) {
+    .menu-list {
+      width: 50%;
+      ul {
+        width: 80% !important;
+      }
+      a {
+        font-size: 15px !important;
+      }
+    }
+
+    .contact {
+      width: 50%;
+      justify-content: space-between; 
+
+      a {
+        font-size: 15px !important;    
+      }
+
+      .btn.squere {
+        padding: 0 10px !important;
+        font-size: 15px !important;  
+      }
+    }
+  }
+
+  @media screen and (min-width: $xxl) {
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+    }
+
+    .menu-list {
+      justify-content: center !important;      
+      width: 50%;
+    }
+
+    .menu-list ul {
+      width: 80% !important;
+      justify-content: space-around !important;
+    }
+  }
+}
+
+
+
+
+
+
+
+

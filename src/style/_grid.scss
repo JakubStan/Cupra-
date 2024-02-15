@@ -1,0 +1,22 @@
+//Breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+.container{    
+    margin: 0 auto;
+    width: 80%;
+
+    @media screen and (max-width: $sm) {
+        width: 90%;              
+    }
+
+
+
+
+}
+
+
+

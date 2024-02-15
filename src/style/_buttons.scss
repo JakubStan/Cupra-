@@ -1,0 +1,89 @@
+@import '_variables';
+@import '_grid.scss';
+
+.btn{    
+  
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    justify-content: center !important;
+
+    @media screen and (max-width: $sm) {
+        width: 100%;        
+    }
+
+    @media screen and (min-width: $sm) {
+        width: fit-content;        
+    }
+
+
+
+    &.dark{ 
+        color: $white-light;
+        background-color: $dark;
+        border: 1px solid $dark;
+
+        &:hover{
+            background-color: $gray;
+        }
+    }
+
+    &.light-beige{
+        color: $black;
+        background-color: $light-beige;
+
+        &:hover{
+            background-color: $white-light;
+        }
+    }
+
+    &.squere {  
+        padding: 0px 24px 0px 24px;      
+
+
+        &.transparent {
+            background-color: transparent;
+
+            &.dark {
+                position: relative;
+                border: 1px solid $dark;
+                color: $dark;
+            
+                &:hover {
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    top: -2px; 
+                    left: -2px; 
+                    right: -2px; 
+                    bottom: -2px; 
+                    border: 2px solid $dark;      
+                    z-index: -1; 
+                  }
+                }
+              }
+
+            &.white{
+                border: 1px solid $white-light;
+                color: $white-light;                
+            }
+
+        
+        }
+    
+    }
+
+    &.circle{        
+        padding: 0px, 32px, 0px, 32px;
+        border-radius: 24px;
+        gap: 10px;        
+    }
+
+
+
+
+}

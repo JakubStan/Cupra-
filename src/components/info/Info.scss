@@ -1,0 +1,127 @@
+@import '../../style/style.scss';
+
+
+#Info{
+    display: flex;
+    background-color: $bg-black;
+    padding-top: 7%;
+    padding-bottom: 3.5%;
+    color: white;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    
+            
+            .item{
+                    display: flex;
+                    justify-content: space-between;
+
+                    &.middle{
+                        margin-top: 6%;
+                        margin-bottom: 6%;
+                        
+                        .text {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                    }
+
+                    a{
+                        margin-top: 5%;
+                    }
+
+                    p{
+                        margin: 0;
+                    }
+
+                    
+
+                    .img-div{
+                        width: 57%;
+                    }
+
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                    }
+
+                    .text{                        
+                        width: 41%;                                  
+                    }
+
+                    .right{                   
+                        display: flex;
+                        justify-content: center;                                  
+                    }   
+                    
+
+                    
+                .rectangle{                    
+                    position: relative;
+
+                    &.image{
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            width: 10%;
+                            height: 65%;
+                            background-color: $bg-black;
+                            z-index: 1;
+                        }
+                    }
+
+                    &.left-rectangle{
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 10%;
+                            height: 65%;
+                            background-color: $bg-black;
+                            z-index: 1;
+                        }
+                    }
+            
+                }
+
+                    @media screen and (max-width: $md) {
+                        flex-direction: column;
+
+                        a{
+                            width: 100%;
+                        }
+
+                        &.middle{
+                            margin: 20% 0;
+                            flex-direction: column-reverse;
+                        }
+
+                        .text{
+                            padding-top: 5%;
+                        }
+
+                        .img-div, .text{
+                            width: 100%;
+                            margin: 0%;
+                            justify-content: center;
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+                        }     
+                    }
+    
+                }
+
+                    
+            }                
+
+                  
+    }
+        
+    

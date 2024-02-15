@@ -1,0 +1,192 @@
+@import '../../style/style.scss';
+
+.select-details{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    
+    cursor: pointer;
+
+    img{
+        width: auto;
+        height: 90px;
+    }
+
+    p{
+        margin-left: 5%;
+    }
+
+    @media screen and (min-width: $sm) {
+        margin: 30px 0px;
+        display: flex;
+        align-items: center;
+        margin-right: 30%;                
+    }
+    
+    @media screen and (max-width: $sm) {
+        margin: 0 !important;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        p{
+            margin: 10px 0px;
+        }
+
+        img {         
+            margin-top: 10px;
+        }
+    }
+
+
+}
+
+.css-b62m3t-container {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $md) and (max-width: $xl) {
+             width: 70%;
+             margin: 40px auto;          
+    }
+}
+
+.css-t3ipsp-control{
+    box-shadow: none !important;
+    border-color: transparent !important;
+    background-color: $bg-light !important;
+    cursor: pointer;
+
+    &::before{
+        content: "";
+        position: absolute;
+        border: 1px solid $gray-light;
+        width: 95%;
+        height: 100%;
+        right: 0;
+        left: 5%;
+        }
+
+
+}
+
+
+
+#react-select-3-listbox {
+    > div {
+
+        background-color: transparent !important;
+        position: relative;
+        cursor: pointer;
+        padding-left: 0px;
+
+
+        &:last-child {
+            &::before{
+                   border-bottom: 1px solid $gray-light;
+                }        
+            
+        }
+
+        &{
+        &::before{
+            content: "";
+            position: absolute;
+            border-top: 1px solid $gray-light;
+            border-right: 1px solid $gray-light;
+            width: 95%;
+            height: 100%;
+            right: 0;
+            left: 5%;
+            top: 0;
+            bottom: 0;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;         
+            border-left: 1px solid $gray-light;
+            width: 95%;
+            height: 100%;
+            right: 0;
+            left: 5%;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+    }
+
+}
+
+.css-1nmdiq5-menu{
+    border: none !important;
+    position: relative;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    right: -1px;
+    margin-top: 25px;
+    background-color: $bg-light !important;
+}
+
+.css-1n6sfyn-MenuList{
+   
+    border-right: 1px solid $gray-light;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    max-height: 330px !important;
+}
+
+
+#react-select-3-option-0 .select-details{
+    .arrow{
+        width: 10px;
+        height: 7px;
+        margin-left: 60%;        
+    }
+
+}
+
+
+.css-13cymwt-control{
+    border: none !important;
+    background-color: $bg-light !important;
+    box-shadow: transparent !important;
+    cursor: pointer;
+
+    &:hover{
+        border: none;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        border: 1px solid $gray-light;
+        width: 95%;
+        height: 100%;
+        right: 0;
+        left: 5%;
+    }
+}
+
+.css-1fdsijx-ValueContainer{
+    padding: 0 !important;
+}
+
+.css-1dimb5e-singleValue {
+    margin: 0 !important;
+}
+  
+
+.css-1u9des2-indicatorSeparator{
+    display: none;
+}
+
+.css-1xc3v61-indicatorContainer {
+    color: $black !important;
+}
+
+
